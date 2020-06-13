@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import Lion from './lion.png';
+import homeComponent from './app/home/home.js';
 
 function component() {
     const element = document.createElement('div');
@@ -12,8 +13,12 @@ function component() {
     // Add the image to our existing div.
    const icon = new Image();
    icon.src = Lion;
+   icon.height = 150;
+   icon.width = 150;
 
    element.appendChild(icon);
+
+   element.appendChild(homeComponent());
   
     return element;
   }
